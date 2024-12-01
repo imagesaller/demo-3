@@ -1,0 +1,67 @@
+<head>
+<body>
+    <html>
+        <title>تغيير لون الخلفية تلقائيًا</title>
+        <script>
+            function changeBackgroundColor() {
+                setInterval(function() {
+                    document.body.style.backgroundColor = getRandomColor();
+                }, 2000); // يغير اللون كل ثانيتين (2000 مللي ثانية)
+            }
+    
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+    
+            changeBackgroundColor(); // يبدأ تغيير الألوان تلقائياً
+        </script>
+        <h1
+        style="text-align: center;"
+        style="text-decoration-style: dashed;"
+        id="welcome" >
+        welcome !
+    </html>
+<input type="text" id="inputtext"/>
+<div>
+<style>
+    #outputtext{
+        width: 150px;
+        height: 30px;
+        position: absolute;
+            top: 10px;
+            left: 76%;
+        text-align: center;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #000000;
+        background-color: #00ff62;
+    }
+</style>
+<div id="outputtext"> </div>
+<script>
+const inputText = document.getElementById('inputtext');
+const outputText = document.getElementById('outputtext');
+inputText.addEventListener('input', () => {
+outputText.textContent = inputText.value;
+});
+</script>
+<Style>
+    #inputtext{
+        width: 150px;
+        height: 30px;
+        position: absolute;
+            top: 29px;
+            left:20px;
+        text-align: center;
+        border-color: #000000;
+        background-color: #00ff62;
+    }
+</Style>
+
+</body>
+</head>
